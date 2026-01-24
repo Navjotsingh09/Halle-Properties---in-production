@@ -207,8 +207,6 @@ function App() {
             </button>
           </div>
         </div>
-      </div>
-
       {/* About Us Section */}
       <div className="w-full bg-[#dadddc] flex flex-row items-center justify-center px-[80px] py-[99px] gap-[80px]">
         <img src="https://www.figma.com/api/mcp/asset/a919bc6c-2b59-4936-a6a3-af5cf5c816cb" alt="About Us" className="w-[585px] h-[637px] rounded-[20px] shadow-lg object-cover" />
