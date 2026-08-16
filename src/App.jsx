@@ -1,6 +1,16 @@
 import React from 'react';
+import CookiePolicy from './CookiePolicy.jsx';
+import TermsAndConditions from './TermsAndConditions.jsx';
 
 function App() {
+  if (window.location.pathname === '/terms-and-conditions' || window.location.pathname === '/terms-and-conditions/') {
+    return <TermsAndConditions />;
+  }
+
+  if (window.location.pathname === '/cookie-policy' || window.location.pathname === '/cookie-policy/') {
+    return <CookiePolicy />;
+  }
+
   return (
     <div data-layer="Halle Home Page" className="HalleHomePage w-full min-h-screen flex flex-col items-center justify-start">
       {/* Hero Section with Navigation */}
@@ -21,7 +31,7 @@ function App() {
       </div>
 
       {/* Hero Content Section */}
-      <div data-layer="Hero Section" className="HeroSection w-full bg-[var(--brand-colours\/black,#2a363a)] flex flex-col items-center overflow-clip pb-[50px] px-[80px] relative shrink-0">
+      <div data-layer="Hero Section" className="HeroSection w-full bg-[var(--brand-colours/black,#2a363a)] flex flex-col items-center overflow-clip pb-[50px] px-[80px] relative shrink-0">
         <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0">
           <div className="col-1 h-[764px] ml-0 mt-0 relative rounded-[20px] row-1 w-[1280px]">
             <img data-layer="Home Hero Image Overlay" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src="https://www.figma.com/api/mcp/asset/6595aed0-1b41-4b75-b51f-782f8333fb32" alt="Hero" />
@@ -35,7 +45,6 @@ function App() {
             <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0">
               <div className="bg-white col-1 h-[74px] ml-0 mt-0 rounded-[50px] row-1 w-[1120px]" />
               <div className="col-1 content-stretch flex gap-[41px] items-center ml-[40px] mt-[12px] relative row-1">
-                {/* Payment Filter */}
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[124px]">
                   <p className="font-['Poppins:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[12px] tracking-[-0.6px] w-full whitespace-pre-wrap">Payment</p>
                   <div className="content-stretch flex gap-[40px] items-center relative shrink-0 w-full">
@@ -45,9 +54,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                {/* Divider */}
-                <div className="bg-[var(--brand-colours\/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
-                {/* Location Filter */}
+                <div className="bg-[var(--brand-colours/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[124px]">
                   <p className="font-['Poppins:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[12px] tracking-[-0.6px] w-full whitespace-pre-wrap">Location</p>
                   <div className="content-stretch flex gap-[40px] items-center relative shrink-0 w-full">
@@ -57,8 +64,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[var(--brand-colours\/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
-                {/* Property Type Filter */}
+                <div className="bg-[var(--brand-colours/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[124px]">
                   <p className="font-['Poppins:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[12px] tracking-[-0.6px] w-full whitespace-pre-wrap">Property Type</p>
                   <div className="content-stretch flex gap-[40px] items-center relative shrink-0 w-full">
@@ -68,16 +74,14 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[var(--brand-colours\/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
-                {/* Keyword Filter */}
+                <div className="bg-[var(--brand-colours/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[124px]">
                   <p className="font-['Poppins:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[12px] tracking-[-0.6px] w-full whitespace-pre-wrap">Keyword</p>
                   <div className="content-stretch flex items-center relative shrink-0 w-full">
                     <p className="font-['Poppins:Italic',sans-serif] italic leading-[normal] relative shrink-0 text-[#969696] text-[16px] tracking-[-0.8px] w-[124px] whitespace-pre-wrap">Building/Shop/...</p>
                   </div>
                 </div>
-                <div className="bg-[var(--brand-colours\/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
-                {/* Price Filter */}
+                <div className="bg-[var(--brand-colours/black,#2a363a)] h-[50px] rounded-[20px] shrink-0 w-[2px]" />
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[139px]">
                   <p className="font-['Poppins:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#1e1e1e] text-[12px] tracking-[-0.6px] w-full whitespace-pre-wrap">Price</p>
                   <div className="content-stretch flex gap-[40px] items-center relative shrink-0 w-full">
@@ -111,160 +115,154 @@ function App() {
             <div className="w-full lg:w-[580px] text-Brand-Colours-Black text-5xl font-semibold font-['Poppins'] leading-tight">Discover Your Perfect Dream Property Today</div>
             <div className="w-full lg:w-[496px] text-Brand-Colours-Black text-lg font-normal font-['Poppins']">Explore our hand picked selection of premium properties, featuring stunning designs, prime locations, and tailored details to match your lifestyle and needs. Find the perfect home or investment with ease.</div>
           </div>
-          
-          {/* Property Cards */}
+
           <div className="w-full flex flex-row justify-center items-start gap-5">
-              {/* Property Card 1 */}
-              <div className="relative w-[413px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
-                <img src="https://www.figma.com/api/mcp/asset/03a67313-69b2-4b86-9dc2-0f7c1d3cdd82" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£195,000</div>
-                    <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
-                      <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
-                        <path d="M7 12L1 6L7 0" stroke="white" strokeWidth="2"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
-                    <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
-                  </div>
-                  <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">1,800 Sq. Ft.</div>
-                    <div className="w-px h-10 bg-white hidden sm:block"></div>
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">3 Beds</div>
-                    <div className="w-px h-10 bg-white hidden sm:block"></div>
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Baths</div>
-                  </div>
+            <div className="relative w-[413px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
+              <img src="https://www.figma.com/api/mcp/asset/03a67313-69b2-4b86-9dc2-0f7c1d3cdd82" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£195,000</div>
+                  <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                      <path d="M7 12L1 6L7 0" stroke="white" strokeWidth="2" />
+                    </svg>
+                  </button>
                 </div>
-              </div>
-
-              {/* Property Card 2 */}
-              <div className="relative w-[414px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
-                <img src="https://www.figma.com/api/mcp/asset/da4b1b35-fa16-49c2-88ea-57e9dd2b7a71" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£165,500</div>
-                    <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full hover:scale-110 transition-transform duration-200"></button>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
-                    <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
-                  </div>
-                  <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">1,200 Sq. Ft.</div>
-                    <div className="w-px h-10 bg-white hidden sm:block"></div>
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Beds</div>
-                    <div className="w-px h-10 bg-white hidden sm:block"></div>
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Baths</div>
-                  </div>
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
+                  <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
                 </div>
-              </div>
-
-              {/* Property Card 3 */}
-              <div className="relative w-[413px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
-                <img src="https://www.figma.com/api/mcp/asset/943bf4fc-90b3-4e44-896f-001428cf8c21" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£250,875</div>
-                    <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full hover:scale-110 transition-transform duration-200"></button>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
-                    <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
-                  </div>
-                  <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">3,200 Sq. Ft.</div>
-                    <div className="w-px h-10 bg-white hidden sm:block"></div>
-                    <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">4 Beds</div>
-                    <div className="text-white text-base font-normal font-['Poppins']">3 Baths</div>
-                  </div>
+                <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">1,800 Sq. Ft.</div>
+                  <div className="w-px h-10 bg-white hidden sm:block"></div>
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">3 Beds</div>
+                  <div className="w-px h-10 bg-white hidden sm:block"></div>
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Baths</div>
                 </div>
               </div>
             </div>
-            
-            {/* View More Button */}
-            <button className="w-[278px] mt-14 px-5 py-2.5 bg-Brand-Colours-Blue rounded-[53px] text-center text-neutral-50 text-xl font-semibold font-['Poppins'] hover:scale-110 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer">
-              View More Properties
-            </button>
+
+            <div className="relative w-[414px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
+              <img src="https://www.figma.com/api/mcp/asset/da4b1b35-fa16-49c2-88ea-57e9dd2b7a71" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£165,500</div>
+                  <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full hover:scale-110 transition-transform duration-200"></button>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
+                  <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
+                </div>
+                <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">1,200 Sq. Ft.</div>
+                  <div className="w-px h-10 bg-white hidden sm:block"></div>
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Beds</div>
+                  <div className="w-px h-10 bg-white hidden sm:block"></div>
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">2 Baths</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative w-[413px] h-[540px] group hover:scale-[1.03] transition-all duration-500 cursor-pointer">
+              <img src="https://www.figma.com/api/mcp/asset/943bf4fc-90b3-4e44-896f-001428cf8c21" alt="Property" className="w-full h-full rounded-[20px] shadow-lg group-hover:shadow-2xl transition-all duration-500 object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 p-5 bg-Brand-Colours-Black rounded-[20px] flex flex-col gap-3.5 backdrop-blur-sm bg-opacity-95">
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-xl lg:text-2xl font-semibold font-['Poppins']">£250,875</div>
+                  <button className="w-12 h-7 bg-Brand-Colours-Blue rounded-full hover:scale-110 transition-transform duration-200"></button>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="text-white text-base font-semibold font-['Poppins']">Newport Street</div>
+                  <div className="text-white text-base font-normal font-['Poppins']">Wolverhampton</div>
+                </div>
+                <div className="flex items-center gap-4 lg:gap-12 flex-wrap">
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">3,200 Sq. Ft.</div>
+                  <div className="w-px h-10 bg-white hidden sm:block"></div>
+                  <div className="text-white text-sm lg:text-base font-normal font-['Poppins']">4 Beds</div>
+                  <div className="text-white text-base font-normal font-['Poppins']">3 Baths</div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <button className="w-[278px] mt-14 px-5 py-2.5 bg-Brand-Colours-Blue rounded-[53px] text-center text-neutral-50 text-xl font-semibold font-['Poppins'] hover:scale-110 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer">
+            View More Properties
+          </button>
         </div>
       </div>
-      
+
       {/* About Us Section */}
       <div className="w-full bg-[#dadddc] flex flex-col items-center justify-center px-[80px] py-[60px]">
         <div className="w-full max-w-[1280px] flex flex-row items-center justify-center gap-[80px]">
-        <img src="https://www.figma.com/api/mcp/asset/91cefe53-70f6-4d64-a2ba-5f61f8a85659" alt="About Us" className="w-[585px] h-[637px] rounded-[20px] shadow-lg object-cover" />
-        <div className="flex flex-col gap-[35px] items-start justify-center w-[615px]">
-          <div className="flex flex-col gap-[20px] items-start">
-            <div className="text-[#2a363a] text-[50px] font-semibold leading-[1.2]">Why Halle Is Your Best Property Partner</div>
-            <div className="text-[#2a363a] text-[18px] font-normal leading-normal">At Halle, we’re trusted estate agents in Wolverhampton and Willenhall. With __ years of experience, we deliver quality properties and personalised service to guide you every step of the way.</div>
+          <img src="https://www.figma.com/api/mcp/asset/91cefe53-70f6-4d64-a2ba-5f61f8a85659" alt="About Us" className="w-[585px] h-[637px] rounded-[20px] shadow-lg object-cover" />
+          <div className="flex flex-col gap-[35px] items-start justify-center w-[615px]">
+            <div className="flex flex-col gap-[20px] items-start">
+              <div className="text-[#2a363a] text-[50px] font-semibold leading-[1.2]">Why Halle Is Your Best Property Partner</div>
+              <div className="text-[#2a363a] text-[18px] font-normal leading-normal">At Halle, we’re trusted estate agents in Wolverhampton and Willenhall. With __ years of experience, we deliver quality properties and personalised service to guide you every step of the way.</div>
+            </div>
+            <div className="flex flex-col gap-[20px] w-full">
+              <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
+                <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">01</div>
+                <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
+                  <span className="font-semibold">__+ Years of Experience</span><br />A proven track record of excellence in real estate.
+                </div>
+              </div>
+              <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
+                <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">02</div>
+                <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
+                  <span className="font-semibold">Trusted by Thousands of Clients</span><br />Building lasting relationships with homeowners and investors.
+                </div>
+              </div>
+              <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
+                <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">03</div>
+                <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
+                  <span className="font-semibold">Wide Range of Properties</span><br />A wide range of homes across Willenhall & Wolverhampton.
+                </div>
+              </div>
+              <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
+                <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">04</div>
+                <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
+                  <span className="font-semibold">Exceptional Customer Support</span><br />Dedicated to personalised, seamless service.
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col gap-[20px] w-full">
-            <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
-              <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">01</div>
-              <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
-                <span className="font-semibold">__+ Years of Experience</span><br />A proven track record of excellence in real estate.
-              </div>
-            </div>
-            <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
-              <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">02</div>
-              <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
-                <span className="font-semibold">Trusted by Thousands of Clients</span><br />Building lasting relationships with homeowners and investors.
-              </div>
-            </div>
-            <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
-              <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">03</div>
-              <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
-                <span className="font-semibold">Wide Range of Properties</span><br />A wide range of homes across Willenhall & Wolverhampton.
-              </div>
-            </div>
-            <div className="bg-white flex items-center px-[26px] py-[10px] rounded-[20px] shadow-md w-full">
-              <div className="text-[#82c7be] text-[40px] font-medium w-[60px]">04</div>
-              <div className="text-[#2a363a] text-[16px] font-normal w-[495px]">
-                <span className="font-semibold">Exceptional Customer Support</span><br />Dedicated to personalised, seamless service.
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
 
       {/* Services Section */}
       <div className="w-full bg-[#2a363a] flex flex-col items-center justify-center px-[121px] py-[80px]">
         <div className="w-full max-w-[1198px] flex flex-col items-center justify-center gap-[90px]">
-        <div className="text-white text-[60px] font-semibold text-center w-[908px]">Our Key Services</div>
-        <div className="flex flex-row gap-[130px] items-center justify-center w-full">
-          <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
-            <div className="h-[202px] w-[202px] relative">
-              <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
-              <img src="https://www.figma.com/api/mcp/asset/62fb86ac-b47a-444b-a6fa-e74a1c5739dc" alt="House Search" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+          <div className="text-white text-[60px] font-semibold text-center w-[908px]">Our Key Services</div>
+          <div className="flex flex-row gap-[130px] items-center justify-center w-full">
+            <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
+              <div className="h-[202px] w-[202px] relative">
+                <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
+                <img src="https://www.figma.com/api/mcp/asset/62fb86ac-b47a-444b-a6fa-e74a1c5739dc" alt="House Search" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+              </div>
+              <div className="text-white text-[30px] text-center w-[150px]">Book a Valuation</div>
             </div>
-            <div className="text-white text-[30px] text-center w-[150px]">Book a Valuation</div>
-          </div>
-          <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
-            <div className="h-[202px] w-[202px] relative">
-              <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
-              <img src="https://www.figma.com/api/mcp/asset/17502715-1a38-49f7-9fee-d2ad549ba267" alt="Renting Letting" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+            <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
+              <div className="h-[202px] w-[202px] relative">
+                <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
+                <img src="https://www.figma.com/api/mcp/asset/17502715-1a38-49f7-9fee-d2ad549ba267" alt="Renting Letting" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+              </div>
+              <div className="text-white text-[30px] text-center w-[150px]">Renting & Letting</div>
             </div>
-            <div className="text-white text-[30px] text-center w-[150px]">Renting & Letting</div>
-          </div>
-          <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
-            <div className="h-[202px] w-[202px] relative">
-              <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
-              <img src="https://www.figma.com/api/mcp/asset/bec323ee-047c-4c74-8af4-3e948798b575" alt="Buying House" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+            <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
+              <div className="h-[202px] w-[202px] relative">
+                <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
+                <img src="https://www.figma.com/api/mcp/asset/bec323ee-047c-4c74-8af4-3e948798b575" alt="Buying House" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+              </div>
+              <div className="text-white text-[30px] text-center w-[150px]">Buying a Property</div>
             </div>
-            <div className="text-white text-[30px] text-center w-[150px]">Buying a Property</div>
-          </div>
-          <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
-            <div className="h-[202px] w-[202px] relative">
-              <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
-              <img src="https://www.figma.com/api/mcp/asset/eab3ad4e-eaf0-4966-9d04-4ba2ca9bac32" alt="Sale Sign" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+            <div className="flex flex-col gap-[44px] items-center justify-center w-[202px]">
+              <div className="h-[202px] w-[202px] relative">
+                <img src="https://www.figma.com/api/mcp/asset/561e15c4-fdc7-4eaf-8b78-9df7a3127494" alt="Ellipse" className="absolute inset-0 w-full h-full" />
+                <img src="https://www.figma.com/api/mcp/asset/eab3ad4e-eaf0-4966-9d04-4ba2ca9bac32" alt="Sale Sign" className="absolute left-[45px] top-[48px] w-[112px] h-[105px]" />
+              </div>
+              <div className="text-white text-[30px] text-center w-[150px]">Selling a Property</div>
             </div>
-            <div className="text-white text-[30px] text-center w-[150px]">Selling a Property</div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -275,23 +273,23 @@ function App() {
             <div className="text-[#2a363a] text-[50px] font-semibold leading-tight">Here's What Our Satisfied Clients Have to Say About Us</div>
             <div className="text-[#1e1e1e] text-[18px]">Here's what our happy clients have to say about their experience with Halle. From finding their dream home to seamless transactions, your satisfaction is our priority.</div>
           </div>
-        <div className="flex flex-row gap-[15px] items-center justify-center w-full">
-          {[1,2,3].map((_,i) => (
-            <div key={i} className="bg-white rounded-[20px] shadow-[0px_10px_30px_0px_rgba(0,0,0,0.25)] w-[413px] h-[210px] flex flex-col gap-[20px] p-[40px]">
-              <div className="text-[#1e1e1e] text-[16px]">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</div>
-              <div className="flex flex-row items-center justify-between w-full">
-                <div className="flex flex-col gap-[4px]">
-                  <div className="text-[#82c7be] text-[16px] font-semibold">Stephanie Wallis</div>
-                  <div className="flex flex-row gap-[4px]">
-                    {[...Array(5)].map((_,j) => (
-                      <img key={j} src="https://www.figma.com/api/mcp/asset/45dc2d3d-62ca-4da5-9df7-2acaba388279" alt="star" className="w-[24px] h-[24px]" />
-                    ))}
+          <div className="flex flex-row gap-[15px] items-center justify-center w-full">
+            {[1, 2, 3].map((_, i) => (
+              <div key={i} className="bg-white rounded-[20px] shadow-[0px_10px_30px_0px_rgba(0,0,0,0.25)] w-[413px] h-[210px] flex flex-col gap-[20px] p-[40px]">
+                <div className="text-[#1e1e1e] text-[16px]">Great experience with Halle. Jatinder went out of his way to accommodate me and was genuinely friendly. Excellent service!</div>
+                <div className="flex flex-row items-center justify-between w-full">
+                  <div className="flex flex-col gap-[4px]">
+                    <div className="text-[#82c7be] text-[16px] font-semibold">Stephanie Wallis</div>
+                    <div className="flex flex-row gap-[4px]">
+                      {[...Array(5)].map((_, j) => (
+                        <img key={j} src="https://www.figma.com/api/mcp/asset/45dc2d3d-62ca-4da5-9df7-2acaba388279" alt="star" className="w-[24px] h-[24px]" />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -299,11 +297,11 @@ function App() {
       <div className="w-full bg-[#dadddc] flex flex-col items-center px-[80px] py-[50px]">
         <div className="w-full max-w-[1280px] h-[370px] relative rounded-[20px] overflow-hidden">
           <img src="https://www.figma.com/api/mcp/asset/693fe106-2e75-4d6b-a747-201c297e820e" alt="CTA" className="absolute inset-0 w-full h-full object-cover rounded-[20px]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2a363a] rounded-[20px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2a363a] rounded-[20px]" />
           <div className="absolute left-[51px] top-[82px] flex flex-col gap-[40px] w-[706px]">
             <div className="text-white">
               <h2 className="text-[40px] font-semibold font-['Poppins'] leading-tight mb-4">Find out what your property is worth in seconds</h2>
-              <p className="text-[18px] font-normal font-['Poppins']">With house prices shooting up, how much is your home worth now?<br/>Get your house valued by us today in 60 seconds!</p>
+              <p className="text-[18px] font-normal font-['Poppins']">With house prices shooting up, how much is your home worth now?<br />Get your house valued by us today in 60 seconds!</p>
             </div>
             <button className="bg-white flex items-center gap-2.5 h-[42px] px-5 py-2.5 rounded-[20px] w-fit hover:scale-110 transition-all duration-300">
               <span className="text-[#2a363a] text-[18px] font-medium font-['Poppins']">Instant Valuation</span>
@@ -321,7 +319,6 @@ function App() {
             <h2 className="text-white text-[50px] font-semibold font-['Poppins'] leading-[80px]">Explore New Insight</h2>
           </div>
           <div className="flex flex-row gap-[36px] items-start justify-between">
-            {/* Large Blog Card */}
             <div className="bg-[#fefeff] rounded-[40px] shadow-lg w-[629px] h-[693px] p-[28px] flex flex-col gap-[37px]">
               <img src="https://www.figma.com/api/mcp/asset/5c7dcdf2-15d9-4d01-897b-14ee75a38755" alt="Blog" className="w-[572px] h-[314px] rounded-[40px] object-cover" />
               <div className="flex flex-col gap-[40px] w-[529px]">
@@ -330,7 +327,7 @@ function App() {
                 <button className="bg-[#82c7be] px-5 py-2.5 rounded-[53px] w-[208px] text-white text-[22px] font-semibold font-['Poppins'] hover:scale-110 transition-all duration-300">Read More</button>
               </div>
             </div>
-            {/* Small Blog Cards */}
+
             <div className="flex flex-col gap-[31px]">
               <div className="bg-[#fefeff] rounded-[40px] shadow-lg w-[615px] h-[328px] p-[30px] flex flex-col gap-[40px]">
                 <h3 className="text-[#2a363a] text-[28px] font-semibold font-['Poppins']">Why Regular Plumbing Maintenance Saves You More Money</h3>
@@ -354,7 +351,6 @@ function App() {
             <h2 className="text-[#2a363a] text-[50px] font-semibold font-['Poppins'] leading-tight">Frequently Asked Questions</h2>
           </div>
           <div className="bg-white border border-[#dadddc] rounded-[12px] p-2 w-[825px] flex flex-col gap-2">
-            {/* FAQ Item 1 - Open */}
             <div className="bg-white rounded-lg shadow-sm p-4 flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <p className="text-[#2a363a] text-[16px] font-semibold font-['Poppins']">Title can be added here</p>
@@ -366,7 +362,6 @@ function App() {
               <p className="text-[#2a363a] text-[14px] font-normal font-['Poppins'] leading-[20px]">Lorem ipsum aliquam vel justo fringillas enigma.</p>
             </div>
             <div className="h-px bg-[#dadddc]"></div>
-            {/* FAQ Item 2 - Closed */}
             <div className="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between">
               <p className="text-[#2a363a] text-[16px] font-medium font-['Poppins']">Title can be added here</p>
               <div className="bg-[#dadddc] rounded-full p-1">
@@ -374,7 +369,6 @@ function App() {
               </div>
             </div>
             <div className="h-px bg-[#dadddc]"></div>
-            {/* FAQ Item 3 - Closed */}
             <div className="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between">
               <p className="text-[#2a363a] text-[16px] font-medium font-['Poppins']">Title can be added here</p>
               <div className="bg-[#dadddc] rounded-full p-1">
@@ -382,7 +376,6 @@ function App() {
               </div>
             </div>
             <div className="h-px bg-[#dadddc]"></div>
-            {/* FAQ Item 4 - Closed */}
             <div className="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between">
               <p className="text-[#2a363a] text-[16px] font-medium font-['Poppins']">Title can be added here</p>
               <div className="bg-[#dadddc] rounded-full p-1">
@@ -431,13 +424,14 @@ function App() {
               <div className="flex flex-col gap-5 w-[130px]">
                 <p className="text-[24px] font-bold font-['Poppins']">Legal</p>
                 <div className="flex flex-col gap-5 text-[16px] font-medium font-['Poppins']">
-                  <p className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Terms of services</p>
+                  <a href="/terms-and-conditions" className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Terms of services</a>
                   <p className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Privacy Policy</p>
-                  <p className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Cookies</p>
+                  <a href="/cookie-policy" className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Cookie Policy</a>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="flex flex-col gap-4 rounded-[20px] border border-white/10 bg-white/5 p-5 text-white">
             <p className="text-[20px] font-bold font-['Poppins']">Company Information</p>
             <p className="text-[15px] leading-7 font-['Poppins']"><span className="font-semibold">Company Registration No:</span> 13459060</p>
@@ -445,14 +439,13 @@ function App() {
             <p className="text-[15px] leading-7 font-['Poppins']"><span className="font-semibold">Regulatory Memberships:</span> [Insert active redress scheme membership(s), e.g. The Property Ombudsman / Propertymark]</p>
             <p className="text-[12px] leading-6 text-[#dadddc] font-['Poppins']">Required for UK legal compliance and consumer disclosure for estate agency operations.</p>
           </div>
+
           <div className="flex flex-row items-center justify-between text-white text-[16px] font-semibold font-['Plus Jakarta Sans']">
             <p>Halle © All rights reserved Copyrights 2025</p>
             <p>Site By 5RV Digital</p>
           </div>
         </div>
       </footer>
-
-      {/* ...existing code... */}
     </div>
   );
 }
