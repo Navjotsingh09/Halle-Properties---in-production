@@ -7,7 +7,7 @@ function App() {
     return <TermsAndConditions />;
   }
 
-  if (window.location.pathname === '/cookie-policy' || window.location.pathname === '/cookie-policy/') {
+  if (window.location.pathname === '/cookies-policy' || window.location.pathname === '/cookies-policy/' || window.location.pathname === '/cookie-policy' || window.location.pathname === '/cookie-policy/') {
     return <CookiePolicy />;
   }
 
@@ -426,7 +426,7 @@ function App() {
                 <div className="flex flex-col gap-5 text-[16px] font-medium font-['Poppins']">
                   <a href="/terms-and-conditions" className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Terms of services</a>
                   <p className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Privacy Policy</p>
-                  <a href="/cookie-policy" className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Cookie Policy</a>
+                  <a href="/cookies-policy" className="cursor-pointer hover:text-[#82c7be] transition-colors duration-300">Cookie Policy</a>
                 </div>
               </div>
             </div>

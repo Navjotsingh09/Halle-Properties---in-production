@@ -9,16 +9,5 @@
       "destination": "/index-react.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/cookies-policy",
-      "destination": "/cookie-policy",
-      "permanent": false
-    },
-    {
-      "source": "/cookies-policy/",
-      "destination": "/cookie-policy",
-      "permanent": false
-    }
-  ]
+  "redirects": []
 }
