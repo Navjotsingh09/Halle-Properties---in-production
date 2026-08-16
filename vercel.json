@@ -2,5 +2,23 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index-react.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/cookies-policy",
+      "destination": "/cookie-policy",
+      "permanent": false
+    },
+    {
+      "source": "/cookies-policy/",
+      "destination": "/cookie-policy",
+      "permanent": false
+    }
+  ]
 }
