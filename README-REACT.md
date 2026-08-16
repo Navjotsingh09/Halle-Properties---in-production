@@ -10,6 +10,7 @@ This directory contains both implementations of the Halle Properties website:
 - `script.js` - Vanilla JavaScript
 
 ### React + Tailwind Version
+
 - `src/App.jsx` - React component with Tailwind CSS
 - `src/main.jsx` - React entry point
 - `src/index.css` - Tailwind directives
