@@ -37,7 +37,7 @@ function CookiePolicy() {
           <section>
             <h2>1. What Are Cookies?</h2>
             <p>Cookies are small text files placed on your device when you visit a website. They allow websites to remember user preferences, improve functionality, understand visitor behaviour and provide a more personalised browsing experience.</p>
-            <p>Halleuk Ltd ("Halle", "we", "our", or "us") uses cookies and similar tracking technologies across our website to ensure our property services operate effectively, improve user experience and understand how visitors interact with our property listings and online services.</p>
+            <p>Halleuk Ltd (&quot;Halle&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) uses cookies and similar tracking technologies across our website to ensure our property services operate effectively, improve user experience and understand how visitors interact with our property listings and online services.</p>
             <p>Cookies may collect information about how users browse property pages, search available properties, interact with valuation tools and submit enquiries.</p>
           </section>
 
@@ -114,33 +114,162 @@ function CookiePolicy() {
             <h2>5. Cookie Audit Table</h2>
             <p>Here’s a breakdown of the cookies that may be used on this site.</p>
 
+            <h3>Strictly Necessary Cookies</h3>
             <table className="legal-table">
               <thead>
                 <tr>
-                  <th>Cookie Category</th>
-                  <th>Purpose and Examples</th>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Duration</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Strictly Necessary Cookies</td>
-                  <td>Required for secure access, site operation and core functionality.</td>
+                  <td>cookie_consent</td>
+                  <td>Halle Property Professionals</td>
+                  <td>Stores cookie consent preferences</td>
+                  <td>12 months</td>
                 </tr>
                 <tr>
-                  <td>Google Analytics Cookies</td>
-                  <td>Used to measure website traffic, user journeys and engagement with property content.</td>
+                  <td>PHPSESSID</td>
+                  <td>Halle Property Professionals</td>
+                  <td>Maintains session functionality</td>
+                  <td>Session</td>
                 </tr>
                 <tr>
-                  <td>Google Tag Manager Cookies</td>
-                  <td>Used to manage website tracking and analytics scripts.</td>
+                  <td>csrf_token</td>
+                  <td>Halle Property Professionals</td>
+                  <td>Security and form protection</td>
+                  <td>Session</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Google Analytics Cookies</h3>
+            <table className="legal-table">
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>_ga</td>
+                  <td>Google Analytics</td>
+                  <td>Distinguishes unique users</td>
+                  <td>2 years</td>
                 </tr>
                 <tr>
-                  <td>Functional Cookies</td>
-                  <td>Remember user preferences and improve website usability.</td>
+                  <td>_ga*</td>
+                  <td>Google Analytics</td>
+                  <td>Maintains session state and reporting</td>
+                  <td>2 years</td>
                 </tr>
                 <tr>
-                  <td>Marketing Cookies (If Enabled)</td>
-                  <td>Used to assess campaign performance and promotional engagement.</td>
+                  <td>_gid</td>
+                  <td>Google Analytics</td>
+                  <td>Distinguishes users</td>
+                  <td>24 hours</td>
+                </tr>
+                <tr>
+                  <td>_gat</td>
+                  <td>Google Analytics</td>
+                  <td>Throttles request rate</td>
+                  <td>1 hour</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Google Tag Manager Cookies</h3>
+            <table className="legal-table">
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>gtm*</td>
+                  <td>Google Tag Manager</td>
+                  <td>Supports tag deployment and tracking configuration</td>
+                  <td>Varies</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Functional Cookies</h3>
+            <table className="legal-table">
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>language_preference</td>
+                  <td>Halle Property Professionals</td>
+                  <td>Stores language preference</td>
+                  <td>12 months</td>
+                </tr>
+                <tr>
+                  <td>accessibility_settings</td>
+                  <td>Halle Property Professionals</td>
+                  <td>Stores accessibility settings</td>
+                  <td>12 months</td>
+                </tr>
+                <tr>
+                  <td>_gid</td>
+                  <td>Google Analytics</td>
+                  <td>Distinguishes users</td>
+                  <td>24 hours</td>
+                </tr>
+                <tr>
+                  <td>_gat</td>
+                  <td>Google Analytics</td>
+                  <td>Throttles request rate</td>
+                  <td>1 hour</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Marketing Cookies (If Enabled)</h3>
+            <table className="legal-table">
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>_fbp</td>
+                  <td>Meta (Facebook)</td>
+                  <td>Tracks advertising performance</td>
+                  <td>90 days</td>
+                </tr>
+                <tr>
+                  <td>fr</td>
+                  <td>Meta (Facebook)</td>
+                  <td>Delivers and measures advertising</td>
+                  <td>90 days</td>
+                </tr>
+                <tr>
+                  <td>_gcl_au</td>
+                  <td>Google Ads</td>
+                  <td>Measures advertising effectiveness</td>
+                  <td>90 days</td>
                 </tr>
               </tbody>
             </table>
@@ -188,7 +317,6 @@ function CookiePolicy() {
               <li>Choose Cookies and Site Data.</li>
               <li>Remove stored data.</li>
             </ol>
-
             <p>Disabling cookies may affect certain website features, including personalised property searches, enquiry functionality or website performance.</p>
           </section>
 
@@ -234,6 +362,11 @@ function CookiePolicy() {
             </address>
             <p>For questions regarding personal data processing, please refer to our Privacy Policy or contact our team directly.</p>
           </section>
+
+          <div className="meta-tags-block" style={{ marginTop: '2rem' }}>
+            <p><strong>Title</strong> - Cookie Policy | Halle Property Professionals</p>
+            <p><strong>Description</strong> - Understand how Halle Property Professionals uses cookies, analytics, tracking technologies and third-party services to improve your online experience.</p>
+          </div>
         </article>
       </main>
 
